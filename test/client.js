@@ -220,7 +220,7 @@ describe('MqttClient', function () {
         host: 'localhost',
         keepalive: 1,
         connectTimeout: 350,
-        reconnectPeriod: 300
+        reconnectPeriod: 0
       })
       client.once('connect', () => {
         client.publish('fakeTopic', 'fakeMessage', {qos: 1}, (err, result) => {
